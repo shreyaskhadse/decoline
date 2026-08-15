@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     description: "Original handcrafted metal art by Rajesh Khadse.",
     type: "website",
     url: siteUrl,
-    images: [{ url: `${siteUrl}/og.png`, width: 1400, height: 737, alt: "Decoline — Art Drawn in Metal" }],
+    images: [{ url: `${siteUrl}/og.jpg`, width: 1200, height: 632, alt: "Decoline — Art Drawn in Metal" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Decoline — Art Drawn in Metal",
     description: "Original handcrafted metal art by Rajesh Khadse.",
-    images: [`${siteUrl}/og.png`],
+    images: [`${siteUrl}/og.jpg`],
   },
 };
 
