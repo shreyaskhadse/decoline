@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   title: "Decoline — Art Drawn in Metal",
   description: "Original handcrafted metal art by Rajesh Khadse, made in Nagpur, India.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.svg?v=3",
+    shortcut: "/favicon.svg?v=3",
   },
   openGraph: {
     title: "Decoline — Art Drawn in Metal",
