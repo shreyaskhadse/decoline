@@ -58,7 +58,8 @@ test("uses generated visual collections and includes phone layouts", async () =>
   assert.match(page, /ArrowUpRight/);
   assert.doesNotMatch(page, /↗|→|↓/);
   assert.match(css, /@media \(max-width: 620px\)/);
-  assert.match(css, /\.site-header\.is-hidden/);
+  assert.doesNotMatch(css, /\.site-header\.is-hidden/);
+  assert.match(css, /aspect-ratio:\s*1672\s*\/\s*941/);
   assert.match(css, /\.floating-whatsapp svg/);
   assert.doesNotMatch(css, /grayscale|mix-blend-mode/);
   assert.match(layout, /Decoline — Art Drawn in Metal/);
