@@ -52,12 +52,15 @@ test("uses generated visual collections and includes phone layouts", async () =>
   assert.match(page, /\/story\//);
   assert.match(page, /\/packaging\//);
   assert.match(page, /\/maker\//);
+  assert.match(page, /hero-editorial-v3\.jpg/);
+  assert.match(page, /GalleryLightbox/);
   assert.match(page, /floating-whatsapp/);
   assert.match(page, /ArrowUpRight/);
   assert.doesNotMatch(page, /↗|→|↓/);
   assert.match(css, /@media \(max-width: 620px\)/);
   assert.match(css, /\.site-header\.is-hidden/);
   assert.match(css, /\.floating-whatsapp svg/);
+  assert.doesNotMatch(css, /grayscale|mix-blend-mode/);
   assert.match(layout, /Decoline — Art Drawn in Metal/);
 
   await Promise.all([
@@ -65,5 +68,6 @@ test("uses generated visual collections and includes phone layouts", async () =>
     access(new URL("../public/story/bending-iron.jpg", import.meta.url)),
     access(new URL("../public/packaging/gift-box-open.jpg", import.meta.url)),
     access(new URL("../public/maker/rajesh-khadse-editorial.jpg", import.meta.url)),
+    access(new URL("../public/hero-editorial-v3.jpg", import.meta.url)),
   ]);
 });

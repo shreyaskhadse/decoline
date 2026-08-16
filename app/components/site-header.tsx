@@ -1,31 +1,20 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight } from "./arrow-icon";
 
 export function SiteHeader() {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
     let frame = 0;
 
     const updateHeader = () => {
       const currentScrollY = window.scrollY;
-      const movement = currentScrollY - lastScrollY.current;
 
       setScrolled(currentScrollY > 24);
-
-      if (currentScrollY < 90) {
-        setHidden(false);
-      } else if (movement > 6) {
-        setHidden(true);
-      } else if (movement < -6) {
-        setHidden(false);
-      }
-
-      lastScrollY.current = currentScrollY;
+      setHidden(currentScrollY > 88);
       frame = 0;
     };
 
@@ -33,7 +22,6 @@ export function SiteHeader() {
       if (!frame) frame = window.requestAnimationFrame(updateHeader);
     };
 
-    lastScrollY.current = window.scrollY;
     window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {

@@ -1,5 +1,6 @@
 import { SiteHeader } from "./components/site-header";
 import { ArrowDown, ArrowRight, ArrowUpRight } from "./components/arrow-icon";
+import { GalleryLightbox } from "./components/gallery-lightbox";
 
 const works = [
   { src: "/concepts/flock-in-flight.jpg", title: "Flock in Flight", category: "Connected wall sculpture", shape: "landscape" },
@@ -40,7 +41,7 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero" aria-labelledby="hero-title">
-        <img className="hero-background" src="/hero-editorial-v2.jpg" alt="Decoline botanical metal wall sculpture in a serene contemporary interior" />
+        <img className="hero-background" src="/hero-editorial-v3.jpg" alt="Decoline botanical metal wall sculpture holding a glass propagation tube and living plant" />
         <div className="hero-shade" />
         <div className="hero-copy intro-reveal">
           <p className="kicker"><span /> Contemporary craft from India</p>
@@ -79,7 +80,7 @@ export default function Home() {
           {works.map((work, index) => (
             <article className={`art-card ${work.shape} scroll-reveal`} key={work.src}>
               <div className="art-image">
-                <img src={work.src} alt={`${work.title}, handcrafted ${work.category.toLowerCase()} by Decoline`} loading={index > 1 ? "lazy" : "eager"} />
+                <img data-expandable src={work.src} alt={`${work.title}, handcrafted ${work.category.toLowerCase()} by Decoline`} loading={index > 1 ? "lazy" : "eager"} />
                 <span className="work-number">0{index + 1}</span>
                 <a href={`mailto:guidelinengp@gmail.com?subject=Enquiry%20about%20${encodeURIComponent(work.title)}`}>Ask about this piece <ArrowUpRight /></a>
               </div>
@@ -90,7 +91,7 @@ export default function Home() {
       </section>
 
       <section className="statement">
-        <div className="statement-image scroll-reveal"><img src="/concepts/flock-in-flight.jpg" alt="Connected blackened-iron flock sculpture flowing across a warm wall" /></div>
+        <div className="statement-image scroll-reveal"><img data-expandable src="/concepts/flock-in-flight.jpg" alt="Connected blackened-iron flock sculpture flowing across a warm wall" /></div>
         <div className="statement-copy scroll-reveal">
           <p className="section-number light">03 / A living tradition</p>
           <blockquote>“One line becomes<br />a sense of movement.”</blockquote>
@@ -103,7 +104,7 @@ export default function Home() {
         {collections.map((item, index) => (
           <a href="#contact" className="collection-row" key={item.title}>
             <span className="row-number">0{index + 1}</span>
-            <img src={item.image} alt="" />
+            <img data-expandable src={item.image} alt={`${item.title} by Decoline`} />
             <h3>{item.title}</h3>
             <p>{item.note}</p>
             <span className="row-arrow"><ArrowUpRight /></span>
@@ -127,7 +128,7 @@ export default function Home() {
           {conceptWorks.map((concept, index) => (
             <article className="concept-card scroll-reveal" key={concept.src}>
               <a href={`mailto:guidelinengp@gmail.com?subject=Custom%20Decoline%20idea%20inspired%20by%20${encodeURIComponent(concept.title)}`} className="concept-image">
-                <img src={concept.src} alt={`${concept.title} — ${concept.category.toLowerCase()} concept for Decoline`} loading="lazy" />
+                <img data-expandable src={concept.src} alt={`${concept.title} — ${concept.category.toLowerCase()} concept for Decoline`} loading="lazy" />
                 <span>Discuss this idea <ArrowUpRight /></span>
               </a>
               <div><span>{String(index + 1).padStart(2, "0")}</span><h3>{concept.title}</h3><p>{concept.category}</p></div>
@@ -138,7 +139,7 @@ export default function Home() {
 
       <section className="craft-story" id="craft">
         <div className="craft-lead-image scroll-reveal">
-          <img src="/story/bending-iron.jpg" alt="Illustrative close-up of an artisan patiently forming a curve in iron" loading="lazy" />
+          <img data-expandable src="/story/bending-iron.jpg" alt="Illustrative close-up of an artisan patiently forming a curve in iron" loading="lazy" />
           <span>Heat · Bend · Consider · Repeat</span>
         </div>
         <div className="craft-copy scroll-reveal">
@@ -149,11 +150,11 @@ export default function Home() {
           <blockquote>Patience in the curve.<br />Care in every joint.<br />A little of the maker in every piece.</blockquote>
         </div>
         <figure className="craft-detail craft-detail-one scroll-reveal">
-          <img src="/story/hammering-brass.jpg" alt="Illustrative close-up of a brass detail being finished by hand" loading="lazy" />
+          <img data-expandable src="/story/hammering-brass.jpg" alt="Illustrative close-up of a brass detail being finished by hand" loading="lazy" />
           <figcaption>Small marks become the surface.</figcaption>
         </figure>
         <figure className="craft-detail craft-detail-two scroll-reveal">
-          <img src="/story/welding-curves.jpg" alt="Illustrative close-up of curved iron sections being carefully joined" loading="lazy" />
+          <img data-expandable src="/story/welding-curves.jpg" alt="Illustrative close-up of curved iron sections being carefully joined" loading="lazy" />
           <figcaption>Separate lines become one form.</figcaption>
         </figure>
         <p className="story-note">Workshop imagery is illustrative of the handcrafted process.</p>
@@ -161,7 +162,7 @@ export default function Home() {
 
       <section className="custom-work" id="custom">
         <div className="custom-image scroll-reveal">
-          <img src="/concepts/custom-nameplate-khadse.jpg" alt="Custom forged metal letter K and KHADSE family name beside a home entrance" loading="lazy" />
+          <img data-expandable src="/concepts/custom-nameplate-khadse.jpg" alt="Custom forged metal letter K and KHADSE family name beside a home entrance" loading="lazy" />
           <span>Letters · Names · House numbers · Personal symbols</span>
         </div>
         <div className="custom-copy scroll-reveal">
@@ -191,15 +192,15 @@ export default function Home() {
         </div>
         <div className="packaging-gallery">
           <figure className="packaging-main scroll-reveal">
-            <img src="/packaging/gift-box-open.jpg" alt="Generated Decoline gift box concept with natural paper protection and a handcrafted metal object" loading="lazy" />
+            <img data-expandable src="/packaging/gift-box-open.jpg" alt="Generated Decoline gift box concept with natural paper protection and a handcrafted metal object" loading="lazy" />
             <figcaption>Made to be opened slowly—and kept long after.</figcaption>
           </figure>
           <figure className="packaging-small scroll-reveal">
-            <img src="/packaging/eco-packaging-set.jpg" alt="Generated recyclable and reusable Decoline packaging concept" loading="lazy" />
+            <img data-expandable src="/packaging/eco-packaging-set.jpg" alt="Generated recyclable and reusable Decoline packaging concept" loading="lazy" />
             <figcaption>Paper, fibre, cotton and a reusable keepsake box.</figcaption>
           </figure>
           <figure className="packaging-wide scroll-reveal">
-            <img src="/packaging/unboxing.jpg" alt="Generated human unboxing moment for a Decoline handcrafted gift" loading="lazy" />
+            <img data-expandable src="/packaging/unboxing.jpg" alt="Generated human unboxing moment for a Decoline handcrafted gift" loading="lazy" />
             <figcaption>A personal object deserves a personal arrival.</figcaption>
           </figure>
         </div>
@@ -214,7 +215,7 @@ export default function Home() {
 
       <section className="studio" id="studio">
         <div className="studio-visual scroll-reveal">
-          <img src="/maker/rajesh-khadse-editorial.jpg" alt="Editorial portrait of Decoline founder and maker Rajesh Khadse" />
+          <img data-expandable src="/maker/rajesh-khadse-editorial.jpg" alt="Editorial portrait of Decoline founder and maker Rajesh Khadse" />
           <span>Rajesh Khadse · Founder & maker</span>
         </div>
         <div className="studio-copy scroll-reveal">
@@ -247,6 +248,7 @@ export default function Home() {
       <a className="floating-whatsapp" href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20discuss%20a%20Decoline%20piece." target="_blank" rel="noreferrer" aria-label="Connect with Decoline on WhatsApp">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.79h-.01a9.84 9.84 0 0 1-5.02-1.38l-.36-.21-3.73.98 1-3.63-.24-.37a9.82 9.82 0 0 1-1.51-5.25A9.87 9.87 0 0 1 12.03 2a9.87 9.87 0 0 1 .01 19.79m8.39-18.18A11.78 11.78 0 0 0 12.04.14C5.52.14.21 5.45.21 11.97c0 2.09.55 4.13 1.6 5.93L.11 24l6.24-1.64a11.84 11.84 0 0 0 5.68 1.45h.01c6.52 0 11.83-5.31 11.83-11.83 0-3.16-1.23-6.13-3.44-8.37" /></svg>
       </a>
+      <GalleryLightbox />
     </main>
   );
 }
