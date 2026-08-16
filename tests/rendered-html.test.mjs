@@ -36,6 +36,8 @@ test("server-renders the complete Decoline experience", async () => {
   assert.match(html, /Custom-made for you/);
   assert.match(html, /A gift for now/);
   assert.match(html, /Rajesh Khadse/);
+  assert.match(html, /Deepa Khadse/);
+  assert.match(html, /Imagined together/);
   assert.match(html, /wa\.me\/919326969492/);
   assert.doesNotMatch(html, /\/artworks\//);
 });
@@ -69,6 +71,7 @@ test("uses generated visual collections and includes phone layouts", async () =>
     access(new URL("../public/story/bending-iron.jpg", import.meta.url)),
     access(new URL("../public/packaging/gift-box-open.jpg", import.meta.url)),
     access(new URL("../public/maker/rajesh-khadse-editorial.jpg", import.meta.url)),
+    access(new URL("../public/maker/deepa-khadse-editorial.jpg", import.meta.url)),
     access(new URL("../public/hero-editorial-v3.jpg", import.meta.url)),
   ]);
 });

@@ -215,15 +215,27 @@ export default function Home() {
 
       <section className="studio" id="studio">
         <div className="studio-visual scroll-reveal">
-          <img data-expandable src="/maker/rajesh-khadse-editorial.jpg" alt="Editorial portrait of Decoline founder and maker Rajesh Khadse" />
-          <span>Rajesh Khadse · Founder & maker</span>
+          <div className="maker-portraits">
+            <figure className="maker-portrait">
+              <img data-expandable src="/maker/rajesh-khadse-editorial.jpg" alt="Editorial portrait of Decoline founder and maker Rajesh Khadse" />
+              <figcaption><span>Rajesh Khadse</span><small>Founder & maker</small></figcaption>
+            </figure>
+            <figure className="maker-portrait">
+              <img data-expandable src="/maker/deepa-khadse-editorial.jpg" alt="Editorial portrait of Decoline creative collaborator Deepa Khadse with her idea sketchbook" />
+              <figcaption><span>Deepa Khadse</span><small>Ideas & creative direction</small></figcaption>
+            </figure>
+          </div>
+          <p className="maker-visual-note">Two perspectives · One evolving practice</p>
         </div>
         <div className="studio-copy scroll-reveal">
-          <p className="section-number">08 / The maker</p>
-          <h2>Made with<br /><em>attention.</em></h2>
-          <p className="lead">Decoline is the evolving studio practice of artist-maker Rajesh Khadse.</p>
-          <p>Working from Nagpur, Rajesh turns raw iron into lyrical, useful forms. Every curve is considered, every joint finished by hand, and every piece carries the small irregularities that make it singular.</p>
-          <div className="maker-signature"><span>Rajesh Khadse</span><small>Founder & maker, Decoline</small></div>
+          <p className="section-number">08 / The people behind Decoline</p>
+          <h2>Made by hand.<br /><em>Imagined together.</em></h2>
+          <p className="lead">Decoline is shaped by Rajesh and Deepa Khadse—a shared practice of making and imagining.</p>
+          <p>Rajesh works at the bench, translating a drawn line into iron with patience and precision. Deepa brings another way of seeing: developing ideas, noticing how an object might live in a home, and helping each direction become more thoughtful, useful and complete.</p>
+          <div className="maker-signatures">
+            <div><span>Rajesh Khadse</span><small>Founder & maker</small></div>
+            <div><span>Deepa Khadse</span><small>Ideas & creative direction</small></div>
+          </div>
         </div>
       </section>
 
@@ -232,7 +244,7 @@ export default function Home() {
         <div className="contact-grid">
           <h2>Start something<br /><em>personal.</em></h2>
           <div className="contact-copy">
-            <p>For available works, made-to-order pieces, custom names and completely new ideas, speak directly with Rajesh.</p>
+            <p>For available works, made-to-order pieces, custom names and completely new ideas, begin a conversation with Decoline. Rajesh handles enquiries directly.</p>
             <a href="mailto:guidelinengp@gmail.com?subject=Decoline%20artwork%20enquiry">guidelinengp@gmail.com <ArrowUpRight /></a>
             <a href="tel:+919326969492">+91 93269 69492 <ArrowUpRight /></a>
             <a className="whatsapp" href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20know%20more%20about%20Decoline." target="_blank" rel="noreferrer">Start on WhatsApp <ArrowUpRight /></a>

@@ -11,7 +11,7 @@ export function SiteHeader() {
         <a href="#collection">Collection</a>
         <a href="#ideas">New ideas</a>
         <a href="#custom">Custom work</a>
-        <a href="#studio">The maker</a>
+        <a href="#studio">The studio</a>
       </nav>
       <a className="header-enquire" href="mailto:guidelinengp@gmail.com?subject=Decoline%20artwork%20enquiry">
         Enquire <ArrowUpRight />
