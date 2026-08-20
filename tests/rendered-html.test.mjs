@@ -36,6 +36,8 @@ test("server-renders the complete Decoline experience", async () => {
   assert.match(html, /Two Currents/);
   assert.match(html, /The Plant Halo/);
   assert.match(html, /Trailing Orbit/);
+  assert.match(html, /The Garden/);
+  assert.match(html, /Light meets living/);
   assert.match(html, /Made slowly/);
   assert.match(html, /Custom-made for you/);
   assert.match(html, /A gift for now/);
@@ -75,6 +77,7 @@ test("uses generated visual collections and includes phone layouts", async () =>
     access(new URL("../public/concepts/double-arc-wall-planter.jpg", import.meta.url)),
     access(new URL("../public/concepts/halo-cradle-planter.jpg", import.meta.url)),
     access(new URL("../public/concepts/orbit-shelf-planter.jpg", import.meta.url)),
+    access(new URL("../public/concepts/garden-keeper-lamp.jpg", import.meta.url)),
     access(new URL("../public/story/bending-iron.jpg", import.meta.url)),
     access(new URL("../public/packaging/gift-box-open.jpg", import.meta.url)),
     access(new URL("../public/packaging/unboxing-v2.jpg", import.meta.url)),

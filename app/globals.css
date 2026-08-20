@@ -135,6 +135,22 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .workshop-concepts-grid { margin-bottom: 12vh; }
 .workshop-concepts-grid .concept-image { aspect-ratio: 3 / 4; }
 .workshop-concepts-grid .concept-image img { object-fit: contain; }
+.garden-keeper-feature { margin-bottom: 12vh; display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); background: var(--ink); color: var(--paper); }
+.garden-keeper-image { display: flex; align-items: stretch; background: #cdb891; overflow: hidden; }
+.garden-keeper-image img { height: 100%; aspect-ratio: 2 / 3; object-fit: cover; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+.garden-keeper-image:hover img { transform: scale(1.018); }
+.garden-keeper-copy { padding: clamp(50px, 7vw, 110px); display: flex; flex-direction: column; justify-content: center; }
+.garden-keeper-copy > p:first-child { margin: 0 0 30px; color: #c6a469; font-size: 8px; letter-spacing: .18em; text-transform: uppercase; }
+.garden-keeper-copy h3 { margin: 0; font-family: var(--font-display), Georgia, serif; font-size: clamp(58px, 6.2vw, 104px); font-weight: 500; line-height: .94; }
+.garden-keeper-copy h3 em { color: #c6a469; font-weight: 400; }
+.garden-keeper-copy .garden-keeper-lead { max-width: 600px; margin: 48px 0 18px; font-family: var(--font-display), Georgia, serif; font-size: 25px; line-height: 1.35; }
+.garden-keeper-copy > p:not(:first-child):not(.garden-keeper-lead) { max-width: 580px; margin: 0; color: #aaa498; font-size: 12px; line-height: 1.85; }
+.garden-keeper-details { margin-top: 38px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.18); border-bottom: 1px solid rgba(255,255,255,.18); }
+.garden-keeper-details span { min-height: 90px; padding: 18px 15px 18px 0; display: flex; flex-direction: column; justify-content: space-between; color: #d5d0c7; font-size: 8px; line-height: 1.5; letter-spacing: .12em; text-transform: uppercase; }
+.garden-keeper-details span + span { padding-left: 15px; border-left: 1px solid rgba(255,255,255,.18); }
+.garden-keeper-details strong { color: #c6a469; font-size: 7px; font-weight: 500; }
+.garden-keeper-copy > a { width: min(100%, 410px); margin-top: 34px; padding: 17px 18px; display: flex; justify-content: space-between; align-items: center; background: var(--paper); color: var(--ink); font-size: 8px; letter-spacing: .16em; text-transform: uppercase; transition: background .3s ease; }
+.garden-keeper-copy > a:hover { background: #c6a469; }
 .further-concepts-heading { margin-bottom: 4vh; padding-top: 22px; display: flex; justify-content: space-between; gap: 4vw; border-top: 1px solid var(--line); }
 .further-concepts-heading p { max-width: 520px; margin: 0; color: #777164; font-size: 10px; line-height: 1.7; text-align: right; }
 
@@ -322,6 +338,14 @@ img[data-expandable] { cursor: zoom-in; }
   .concepts-note { justify-self: start; }
   .workshop-concepts-heading { grid-template-columns: 1fr; gap: 20px; }
   .workshop-concepts-grid { margin-bottom: 7vh; }
+  .garden-keeper-feature { margin-bottom: 8vh; grid-template-columns: 1fr; }
+  .garden-keeper-image img { width: 100%; height: auto; }
+  .garden-keeper-copy { padding: 8vh 7vw; }
+  .garden-keeper-copy h3 { font-size: 61px; }
+  .garden-keeper-copy .garden-keeper-lead { margin-top: 38px; font-size: 23px; }
+  .garden-keeper-details { grid-template-columns: 1fr; }
+  .garden-keeper-details span { min-height: 70px; }
+  .garden-keeper-details span + span { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.18); }
   .further-concepts-heading { margin-bottom: 5vh; flex-direction: column; }
   .further-concepts-heading p { text-align: left; }
   .concept-grid { grid-template-columns: 1fr; gap: 0; }

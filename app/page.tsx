@@ -150,6 +150,24 @@ export default function Home() {
           ))}
         </div>
 
+        <article className="garden-keeper-feature scroll-reveal">
+          <div className="garden-keeper-image">
+            <img data-expandable src="/concepts/garden-keeper-lamp.jpg" alt="The Garden Keeper, an abstract blackened-iron floor lamp with a linen shade and two hanging planters" loading="lazy" />
+          </div>
+          <div className="garden-keeper-copy">
+            <p>Light meets living</p>
+            <h3>The Garden<br /><em>Keeper.</em></h3>
+            <p className="garden-keeper-lead">A floor lamp imagined as a quiet standing presence—holding light above and a little life in each hand.</p>
+            <p>Its continuous blackened-iron line becomes body, arms and structure. Two forged hooks carry small hanging planters, while a warm linen shade completes the silhouette.</p>
+            <div className="garden-keeper-details">
+              <span><strong>01</strong>Warm linen light</span>
+              <span><strong>02</strong>Two planter hooks</span>
+              <span><strong>03</strong>Hand-forged iron</span>
+            </div>
+            <a href="mailto:guidelinengp@gmail.com?subject=Enquiry%20about%20The%20Garden%20Keeper">Discuss this concept <ArrowUpRight /></a>
+          </div>
+        </article>
+
         <div className="further-concepts-heading scroll-reveal">
           <span>Further explorations</span>
           <p>Useful objects and sculptural details we would love to develop with the right home in mind.</p>
