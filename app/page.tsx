@@ -231,7 +231,7 @@ export default function Home() {
             <figcaption>Paper, fibre, cotton and a reusable keepsake box.</figcaption>
           </figure>
           <figure className="packaging-wide scroll-reveal">
-            <img data-expandable src="/packaging/unboxing.jpg" alt="Generated human unboxing moment for a Decoline handcrafted gift" loading="lazy" />
+            <img data-expandable src="/packaging/unboxing-v2.jpg" alt="Generated human unboxing moment for a Decoline handcrafted gift" loading="lazy" />
             <figcaption>A personal object deserves a personal arrival.</figcaption>
           </figure>
         </div>

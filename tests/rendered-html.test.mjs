@@ -77,6 +77,7 @@ test("uses generated visual collections and includes phone layouts", async () =>
     access(new URL("../public/concepts/orbit-shelf-planter.jpg", import.meta.url)),
     access(new URL("../public/story/bending-iron.jpg", import.meta.url)),
     access(new URL("../public/packaging/gift-box-open.jpg", import.meta.url)),
+    access(new URL("../public/packaging/unboxing-v2.jpg", import.meta.url)),
     access(new URL("../public/maker/rajesh-khadse-editorial.jpg", import.meta.url)),
     access(new URL("../public/maker/deepa-khadse-editorial.jpg", import.meta.url)),
     access(new URL("../public/hero-editorial-v3.jpg", import.meta.url)),
