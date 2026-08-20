@@ -116,6 +116,11 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .concepts-note { max-width: 470px; justify-self: end; }
 .concepts-note p { margin: 0; color: #656055; font-size: 13px; line-height: 1.85; }
 .concepts-note small { display: block; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: #817a6d; font-size: 8px; line-height: 1.6; letter-spacing: .14em; text-transform: uppercase; }
+.workshop-concepts-heading { margin-bottom: 4vh; padding-top: 24px; display: grid; grid-template-columns: .36fr 1fr; gap: 5vw; border-top: 1px solid var(--line); }
+.workshop-concepts-heading > span, .further-concepts-heading > span { color: var(--bronze); font-size: 8px; letter-spacing: .17em; text-transform: uppercase; }
+.workshop-concepts-heading h3 { margin: 0; font-family: var(--font-display), Georgia, serif; font-size: clamp(36px, 4vw, 62px); font-weight: 500; }
+.workshop-concepts-heading h3 em { color: var(--bronze); font-weight: 400; }
+.workshop-concepts-heading p { max-width: 600px; margin: 18px 0 0; color: #656055; font-size: 12px; line-height: 1.8; }
 .concept-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9vh 2vw; align-items: start; }
 .concept-card:nth-child(3n + 2) { margin-top: 7vh; }
 .concept-image { position: relative; display: block; aspect-ratio: .8; overflow: hidden; background: #e7e0d4; }
@@ -127,6 +132,11 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .concept-card > div > span { color: #8b8477; font-size: 8px; letter-spacing: .14em; }
 .concept-card h3 { margin: 0; font-family: var(--font-display), Georgia, serif; font-size: 25px; font-weight: 500; }
 .concept-card p { margin: 0; color: #777164; font-size: 8px; letter-spacing: .13em; text-align: right; text-transform: uppercase; }
+.workshop-concepts-grid { margin-bottom: 12vh; }
+.workshop-concepts-grid .concept-image { aspect-ratio: 3 / 4; }
+.workshop-concepts-grid .concept-image img { object-fit: contain; }
+.further-concepts-heading { margin-bottom: 4vh; padding-top: 22px; display: flex; justify-content: space-between; gap: 4vw; border-top: 1px solid var(--line); }
+.further-concepts-heading p { max-width: 520px; margin: 0; color: #777164; font-size: 10px; line-height: 1.7; text-align: right; }
 
 .craft-story { padding: 11vh 5vw 12vh; display: grid; grid-template-columns: 1.08fr .92fr; gap: 6vw 4vw; position: relative; background: var(--ink); color: var(--paper); }
 .craft-lead-image img { height: clamp(500px, 60vw, 760px); object-fit: cover; }
@@ -310,6 +320,10 @@ img[data-expandable] { cursor: zoom-in; }
   .concepts { padding: 10vh 6vw; }
   .concepts-intro { grid-template-columns: 1fr; gap: 35px; margin-bottom: 7vh; }
   .concepts-note { justify-self: start; }
+  .workshop-concepts-heading { grid-template-columns: 1fr; gap: 20px; }
+  .workshop-concepts-grid { margin-bottom: 7vh; }
+  .further-concepts-heading { margin-bottom: 5vh; flex-direction: column; }
+  .further-concepts-heading p { text-align: left; }
   .concept-grid { grid-template-columns: 1fr; gap: 0; }
   .concept-card:nth-child(n) { margin: 0 0 58px; }
   .concept-image { aspect-ratio: .86; }

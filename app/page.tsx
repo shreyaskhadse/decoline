@@ -29,6 +29,12 @@ const conceptWorks = [
   { src: "/concepts/cookbook-stand.jpg", title: "Open Page", category: "Cookbook & tablet stand" },
 ];
 
+const workshopConcepts = [
+  { src: "/concepts/double-arc-wall-planter.jpg", title: "Two Currents", category: "Double-arc wall planter" },
+  { src: "/concepts/halo-cradle-planter.jpg", title: "The Plant Halo", category: "Circular cradle planter" },
+  { src: "/concepts/orbit-shelf-planter.jpg", title: "Trailing Orbit", category: "Circular shelf planter" },
+];
+
 export default function Home() {
   return (
     <main id="top">
@@ -119,9 +125,34 @@ export default function Home() {
             <h2>More forms,<br /><em>still unfolding.</em></h2>
           </div>
           <div className="concepts-note">
-            <p>Beyond the signature pieces, these explorations imagine Decoline at the basin, beside the door, on the dining table and among living plants.</p>
-            <small>Concept visualisations · final forms are developed and made to order</small>
+            <p>Some directions begin as working prototypes in the Decoline studio; others begin as an idea for a particular corner of the home.</p>
+            <small>Workshop prototypes & concept visualisations · final forms are developed and made to order</small>
           </div>
+        </div>
+
+        <div className="workshop-concepts-heading scroll-reveal">
+          <span>From our workshop</span>
+          <div>
+            <h3>Prototypes, <em>refined.</em></h3>
+            <p>Three Decoline planter studies, reimagined in a quieter finish while preserving the original structure and hand-shaped line.</p>
+          </div>
+        </div>
+
+        <div className="concept-grid workshop-concepts-grid">
+          {workshopConcepts.map((concept, index) => (
+            <article className="concept-card scroll-reveal" key={concept.src}>
+              <a href={`mailto:guidelinengp@gmail.com?subject=Custom%20Decoline%20idea%20inspired%20by%20${encodeURIComponent(concept.title)}`} className="concept-image">
+                <img data-expandable src={concept.src} alt={`${concept.title} — refined ${concept.category.toLowerCase()} based on a Decoline workshop prototype`} loading="lazy" />
+                <span>Discuss this piece <ArrowUpRight /></span>
+              </a>
+              <div><span>{String(index + 1).padStart(2, "0")}</span><h3>{concept.title}</h3><p>{concept.category}</p></div>
+            </article>
+          ))}
+        </div>
+
+        <div className="further-concepts-heading scroll-reveal">
+          <span>Further explorations</span>
+          <p>Useful objects and sculptural details we would love to develop with the right home in mind.</p>
         </div>
 
         <div className="concept-grid">
