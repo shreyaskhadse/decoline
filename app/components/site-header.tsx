@@ -10,6 +10,7 @@ export function SiteHeader() {
       <nav aria-label="Primary navigation">
         <a href="#collection">Collection</a>
         <a href="#ideas">New ideas</a>
+        <a href="#balcony">Balconies</a>
         <a href="#custom">Custom work</a>
         <a href="#studio">The studio</a>
       </nav>

@@ -1,6 +1,7 @@
 import { SiteHeader } from "./components/site-header";
 import { ArrowDown, ArrowRight, ArrowUpRight } from "./components/arrow-icon";
 import { GalleryLightbox } from "./components/gallery-lightbox";
+import { BalconyTransformations } from "./components/balcony-transformations";
 
 const works = [
   { src: "/concepts/flock-in-flight.jpg", title: "Flock in Flight", category: "Connected wall sculpture", shape: "landscape" },
@@ -186,13 +187,15 @@ export default function Home() {
         </div>
       </section>
 
+      <BalconyTransformations />
+
       <section className="craft-story" id="craft">
         <div className="craft-lead-image scroll-reveal">
           <img data-expandable src="/story/bending-iron.jpg" alt="Illustrative close-up of an artisan patiently forming a curve in iron" loading="lazy" />
           <span>Heat · Bend · Consider · Repeat</span>
         </div>
         <div className="craft-copy scroll-reveal">
-          <p className="section-number light">05 / Hand & mind</p>
+          <p className="section-number light">06 / Hand & mind</p>
           <h2>Made slowly.<br /><em>Thought through.</em></h2>
           <p className="craft-lead">Every piece begins as an idea and a length of metal.</p>
           <p>We measure, heat, bend, join and finish by hand—returning to the line until it feels balanced. Time is not something we remove from the process; it is what gives the object its character.</p>
@@ -215,7 +218,7 @@ export default function Home() {
           <span>Letters · Names · House numbers · Personal symbols</span>
         </div>
         <div className="custom-copy scroll-reveal">
-          <p className="section-number">06 / Custom-made for you</p>
+          <p className="section-number">07 / Custom-made for you</p>
           <h2>Your idea,<br /><em>drawn in metal.</em></h2>
           <p className="custom-lead">We welcome custom orders—and ideas that do not fit neatly into a catalogue.</p>
           <p>Bring us a letter, a family name, a house number, a rough sketch, an empty wall or simply a problem you would like a beautiful object to solve. Rajesh will discuss the use, size, finish and installation with you before shaping it by hand.</p>
@@ -231,7 +234,7 @@ export default function Home() {
       <section className="packaging" id="gifting">
         <div className="packaging-heading scroll-reveal">
           <div>
-            <p className="section-number">07 / Gifting</p>
+            <p className="section-number">08 / Gifting</p>
             <h2>A gift for now.<br /><em>An object for life.</em></h2>
           </div>
           <div>
@@ -277,7 +280,7 @@ export default function Home() {
           <p className="maker-visual-note">Two perspectives · One evolving practice</p>
         </div>
         <div className="studio-copy scroll-reveal">
-          <p className="section-number">08 / The people behind Decoline</p>
+          <p className="section-number">09 / The people behind Decoline</p>
           <h2>Made by hand.<br /><em>Imagined together.</em></h2>
           <p className="lead">Decoline is shaped by Rajesh and Deepa Khadse—a shared practice of making and imagining.</p>
           <p>Rajesh works at the bench, translating a drawn line into iron with patience and precision. Deepa brings another way of seeing: developing ideas, noticing how an object might live in a home, and helping each direction become more thoughtful, useful and complete.</p>
@@ -289,7 +292,7 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contact">
-        <p className="section-number light">09 / Begin a conversation</p>
+        <p className="section-number light">10 / Begin a conversation</p>
         <div className="contact-grid">
           <h2>Start something<br /><em>personal.</em></h2>
           <div className="contact-copy">
