@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUpRight } from "./arrow-icon";
 
 const balconyConcepts = [
   {
+    code: "1501",
     title: "Morning Rail",
     mode: "Daylight concept",
     summary: "A few well-placed lines bring the edge of the balcony to life.",
@@ -14,6 +15,7 @@ const balconyConcepts = [
     after: "/balcony/balcony-01-after.jpg",
   },
   {
+    code: "1502",
     title: "Breakfast Line",
     mode: "Compact concept",
     summary: "A narrow balcony becomes a useful morning perch without losing circulation.",
@@ -22,6 +24,7 @@ const balconyConcepts = [
     after: "/balcony/balcony-02-after.jpg",
   },
   {
+    code: "1503",
     title: "The Living Wall",
     mode: "Botanical concept",
     summary: "A blank wall becomes a made-to-measure garden drawn in iron and glass.",
@@ -30,6 +33,7 @@ const balconyConcepts = [
     after: "/balcony/balcony-03-after.jpg",
   },
   {
+    code: "1504",
     title: "Evening Perch",
     mode: "Light & living",
     summary: "A quiet corner shaped around the Garden Keeper and a slim place to sit.",
@@ -38,6 +42,7 @@ const balconyConcepts = [
     after: "/balcony/balcony-04-after.jpg",
   },
   {
+    code: "1505",
     title: "Monsoon Order",
     mode: "Weather-ready concept",
     summary: "Useful pieces keep rain-day essentials and greenery beautifully ordered.",
@@ -46,6 +51,7 @@ const balconyConcepts = [
     after: "/balcony/balcony-05-after.jpg",
   },
   {
+    code: "1506",
     title: "Carry the Night",
     mode: "Night concept",
     summary: "One illuminated metal line changes the mood without filling the space.",
@@ -54,6 +60,7 @@ const balconyConcepts = [
     after: "/balcony/balcony-06-after.jpg",
   },
   {
+    code: "1507",
     title: "Keeper After Dark",
     mode: "Night concept",
     summary: "Light and living greenery meet in one sculptural balcony companion.",
@@ -128,7 +135,7 @@ export function BalconyTransformations() {
 
         <div className="balcony-caption" aria-live="polite">
           <div className="balcony-caption-index">
-            <span>{String(active + 1).padStart(2, "0")}</span>
+            <span>#{current.code}</span>
             <small>{current.mode}</small>
           </div>
           <div className="balcony-caption-copy">
@@ -171,7 +178,7 @@ export function BalconyTransformations() {
           <p>Our outdoor pieces receive a weather-resistant coating, made to face rain and scorching sun while keeping their character.</p>
         </div>
         <blockquote>Rain or scorching sun? The metal can take it.<br /><em>Just remember to water the plants.</em></blockquote>
-        <a href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20discuss%20a%20custom%20Decoline%20balcony%20concept." target="_blank" rel="noreferrer">
+        <a href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh! I wanted to get more details and discuss ideas related to #${current.code} (${current.title} balcony concept).`)}`} target="_blank" rel="noreferrer">
           Discuss your balcony <ArrowUpRight />
         </a>
       </div>

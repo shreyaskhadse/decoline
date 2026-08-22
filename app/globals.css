@@ -80,7 +80,7 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .art-card.square .art-image { aspect-ratio: 1; }
 .art-image img { height: 100%; object-fit: cover; transition: transform 1.1s cubic-bezier(.2,.8,.2,1); }
 .art-image:hover img { transform: scale(1.025); }
-.work-number { position: absolute; left: 15px; top: 15px; width: 33px; height: 33px; display: grid; place-items: center; border: 1px solid rgba(23,22,17,.5); border-radius: 50%; font-size: 8px; }
+.work-number { position: absolute; left: 15px; top: 15px; min-width: 49px; height: 30px; padding: 0 8px; display: grid; place-items: center; border: 1px solid rgba(23,22,17,.5); border-radius: 999px; font-size: 7px; letter-spacing: .08em; }
 .art-image > a { position: absolute; right: 15px; bottom: 15px; padding: 13px 14px; background: var(--paper); font-size: 8px; letter-spacing: .14em; text-transform: uppercase; opacity: 0; transform: translateY(7px); transition: .35s ease; }
 .art-image:hover > a { opacity: 1; transform: translateY(0); }
 .art-caption { padding: 18px 0; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--line); }
@@ -128,7 +128,7 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .concept-image > span { position: absolute; right: 14px; bottom: 14px; padding: 12px 14px; background: rgba(251,248,241,.94); display: inline-flex; align-items: center; gap: 10px; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; opacity: 0; transform: translateY(7px); transition: .35s ease; }
 .concept-image:hover img { transform: scale(1.025); }
 .concept-image:hover > span, .concept-image:focus-visible > span { opacity: 1; transform: none; }
-.concept-card > div { padding: 16px 0; display: grid; grid-template-columns: 34px 1fr auto; gap: 14px; align-items: baseline; border-bottom: 1px solid var(--line); }
+.concept-card > div { padding: 16px 0; display: grid; grid-template-columns: 52px 1fr auto; gap: 14px; align-items: baseline; border-bottom: 1px solid var(--line); }
 .concept-card > div > span { color: #8b8477; font-size: 8px; letter-spacing: .14em; }
 .concept-card h3 { margin: 0; font-family: var(--font-display), Georgia, serif; font-size: 25px; font-weight: 500; }
 .concept-card p { margin: 0; color: #777164; font-size: 8px; letter-spacing: .13em; text-align: right; text-transform: uppercase; }
@@ -141,6 +141,7 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .garden-keeper-image:hover img { transform: scale(1.018); }
 .garden-keeper-copy { padding: clamp(50px, 7vw, 110px); display: flex; flex-direction: column; justify-content: center; }
 .garden-keeper-copy > p:first-child { margin: 0 0 30px; color: #c6a469; font-size: 8px; letter-spacing: .18em; text-transform: uppercase; }
+.concept-reference { width: fit-content; margin: -18px 0 24px; padding: 7px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; color: #c6a469; font-size: 7px; letter-spacing: .13em; }
 .garden-keeper-copy h3 { margin: 0; font-family: var(--font-display), Georgia, serif; font-size: clamp(58px, 6.2vw, 104px); font-weight: 500; line-height: .94; }
 .garden-keeper-copy h3 em { color: #c6a469; font-weight: 400; }
 .garden-keeper-copy .garden-keeper-lead { max-width: 600px; margin: 48px 0 18px; font-family: var(--font-display), Georgia, serif; font-size: 25px; line-height: 1.35; }
@@ -405,7 +406,7 @@ img[data-expandable] { cursor: zoom-in; }
   .concept-card:nth-child(n) { margin: 0 0 58px; }
   .concept-image { aspect-ratio: .86; }
   .concept-image > span { opacity: 1; transform: none; }
-  .concept-card > div { grid-template-columns: 28px 1fr; }
+  .concept-card > div { grid-template-columns: 50px 1fr; }
   .concept-card p { grid-column: 2; text-align: left; }
   .balcony-decor { padding: 10vh 6vw 9vh; }
   .balcony-intro { grid-template-columns: 1fr; gap: 36px; margin-bottom: 6vh; }

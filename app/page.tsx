@@ -4,36 +4,36 @@ import { GalleryLightbox } from "./components/gallery-lightbox";
 import { BalconyTransformations } from "./components/balcony-transformations";
 
 const works = [
-  { src: "/concepts/flock-in-flight.jpg", title: "Flock in Flight", category: "Connected wall sculpture", shape: "landscape" },
-  { src: "/concepts/sculptural-wall-sconce.jpg", title: "Carry the Light", category: "Sculptural wall sconce", shape: "portrait" },
-  { src: "/concepts/opal-table-lamp.jpg", title: "Held Glow", category: "Opal glass table lamp", shape: "square" },
-  { src: "/concepts/propagation-frame.jpg", title: "Root & Rise", category: "Glass propagation frame", shape: "portrait" },
-  { src: "/concepts/mug-drying-rack.jpg", title: "Morning Order", category: "Mug display & drying rack", shape: "landscape" },
-  { src: "/concepts/wine-display-rack.jpg", title: "Four Bottles", category: "Wine & stemware stand", shape: "square" },
+  { code: "1201", src: "/concepts/flock-in-flight.jpg", title: "Flock in Flight", category: "Connected wall sculpture", shape: "landscape" },
+  { code: "1202", src: "/concepts/sculptural-wall-sconce.jpg", title: "Carry the Light", category: "Sculptural wall sconce", shape: "portrait" },
+  { code: "1203", src: "/concepts/opal-table-lamp.jpg", title: "Held Glow", category: "Opal glass table lamp", shape: "square" },
+  { code: "1204", src: "/concepts/propagation-frame.jpg", title: "Root & Rise", category: "Glass propagation frame", shape: "portrait" },
+  { code: "1205", src: "/concepts/mug-drying-rack.jpg", title: "Morning Order", category: "Mug display & drying rack", shape: "landscape" },
+  { code: "1206", src: "/concepts/wine-display-rack.jpg", title: "Four Bottles", category: "Wine & stemware stand", shape: "square" },
 ];
 
 const collections = [
-  { title: "Light & atmosphere", note: "Metal forms that carry a softer glow", image: "/concepts/sculptural-wall-sconce.jpg" },
-  { title: "Living with plants", note: "Glass, green and hand-forged line", image: "/concepts/propagation-frame.jpg" },
-  { title: "Useful everyday", note: "Quiet order for the objects we use", image: "/concepts/mug-drying-rack.jpg" },
+  { code: "1202", title: "Light & atmosphere", note: "Metal forms that carry a softer glow", image: "/concepts/sculptural-wall-sconce.jpg" },
+  { code: "1204", title: "Living with plants", note: "Glass, green and hand-forged line", image: "/concepts/propagation-frame.jpg" },
+  { code: "1205", title: "Useful everyday", note: "Quiet order for the objects we use", image: "/concepts/mug-drying-rack.jpg" },
 ];
 
 const conceptWorks = [
-  { src: "/concepts/towel-loop.jpg", title: "The Quiet Loop", category: "Basin towel holder" },
-  { src: "/concepts/plant-pedestal-set.jpg", title: "Three Heights", category: "Nesting plant pedestals" },
-  { src: "/concepts/serving-stand.jpg", title: "At the Table", category: "Two-tier serving stand" },
-  { src: "/concepts/key-crescent.jpg", title: "Homecoming", category: "Entryway key keeper" },
-  { src: "/concepts/umbrella-stand.jpg", title: "After Rain", category: "Umbrella & cane stand" },
-  { src: "/concepts/candle-incense-arc.jpg", title: "Evening Arc", category: "Candle & incense stand" },
-  { src: "/concepts/wall-planter.jpg", title: "Up the Wall", category: "Wall planter & trellis" },
-  { src: "/concepts/jewellery-valet.jpg", title: "Small Rituals", category: "Jewellery valet" },
-  { src: "/concepts/cookbook-stand.jpg", title: "Open Page", category: "Cookbook & tablet stand" },
+  { code: "1401", src: "/concepts/towel-loop.jpg", title: "The Quiet Loop", category: "Basin towel holder" },
+  { code: "1402", src: "/concepts/plant-pedestal-set.jpg", title: "Three Heights", category: "Nesting plant pedestals" },
+  { code: "1403", src: "/concepts/serving-stand.jpg", title: "At the Table", category: "Two-tier serving stand" },
+  { code: "1404", src: "/concepts/key-crescent.jpg", title: "Homecoming", category: "Entryway key keeper" },
+  { code: "1405", src: "/concepts/umbrella-stand.jpg", title: "After Rain", category: "Umbrella & cane stand" },
+  { code: "1406", src: "/concepts/candle-incense-arc.jpg", title: "Evening Arc", category: "Candle & incense stand" },
+  { code: "1407", src: "/concepts/wall-planter.jpg", title: "Up the Wall", category: "Wall planter & trellis" },
+  { code: "1408", src: "/concepts/jewellery-valet.jpg", title: "Small Rituals", category: "Jewellery valet" },
+  { code: "1409", src: "/concepts/cookbook-stand.jpg", title: "Open Page", category: "Cookbook & tablet stand" },
 ];
 
 const workshopConcepts = [
-  { src: "/concepts/double-arc-wall-planter.jpg", title: "Two Currents", category: "Double-arc wall planter" },
-  { src: "/concepts/halo-cradle-planter.jpg", title: "The Plant Halo", category: "Circular cradle planter" },
-  { src: "/concepts/orbit-shelf-planter.jpg", title: "Trailing Orbit", category: "Circular shelf planter" },
+  { code: "1301", src: "/concepts/double-arc-wall-planter.jpg", title: "Two Currents", category: "Double-arc wall planter" },
+  { code: "1302", src: "/concepts/halo-cradle-planter.jpg", title: "The Plant Halo", category: "Circular cradle planter" },
+  { code: "1303", src: "/concepts/orbit-shelf-planter.jpg", title: "Trailing Orbit", category: "Circular shelf planter" },
 ];
 
 export default function Home() {
@@ -59,7 +59,7 @@ export default function Home() {
         <div className="hero-index">
           <span>Featured work</span>
           <strong>Still Growing</strong>
-          <small>Wall sculpture · No. 02</small>
+          <small>#1101 · Wall sculpture · No. 02</small>
         </div>
         <a className="scroll-cue" href="#introduction" aria-label="Scroll to introduction">Scroll <ArrowDown /></a>
       </section>
@@ -88,9 +88,9 @@ export default function Home() {
             <article className={`art-card ${work.shape} scroll-reveal`} key={work.src}>
               <div className="art-image">
                 <img data-expandable src={work.src} alt={`${work.title}, handcrafted ${work.category.toLowerCase()} by Decoline`} loading={index > 1 ? "lazy" : "eager"} />
-                <span className="work-number">0{index + 1}</span>
+                <span className="work-number">#{work.code}</span>
                 <a
-                  href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh, I would like to ask about the Decoline piece “${work.title}”.`)}`}
+                  href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh! I wanted to get more details and discuss ideas related to #${work.code} (${work.title}).`)}`}
                   target="_blank"
                   rel="noreferrer"
                 >Ask about this piece <ArrowUpRight /></a>
@@ -112,9 +112,9 @@ export default function Home() {
       </section>
 
       <section className="collections-list" aria-label="Collections">
-        {collections.map((item, index) => (
+        {collections.map((item) => (
           <a href="#contact" className="collection-row" key={item.title}>
-            <span className="row-number">0{index + 1}</span>
+            <span className="row-number">#{item.code}</span>
             <img data-expandable src={item.image} alt={`${item.title} by Decoline`} />
             <h3>{item.title}</h3>
             <p>{item.note}</p>
@@ -144,10 +144,10 @@ export default function Home() {
         </div>
 
         <div className="concept-grid workshop-concepts-grid">
-          {workshopConcepts.map((concept, index) => (
+          {workshopConcepts.map((concept) => (
             <article className="concept-card scroll-reveal" key={concept.src}>
               <a
-                href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh, I would like to discuss the Decoline piece “${concept.title}”.`)}`}
+                href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh! I wanted to get more details and discuss ideas related to #${concept.code} (${concept.title}).`)}`}
                 className="concept-image"
                 target="_blank"
                 rel="noreferrer"
@@ -155,7 +155,7 @@ export default function Home() {
                 <img data-expandable src={concept.src} alt={`${concept.title} — refined ${concept.category.toLowerCase()} based on a Decoline workshop prototype`} loading="lazy" />
                 <span>Discuss this piece <ArrowUpRight /></span>
               </a>
-              <div><span>{String(index + 1).padStart(2, "0")}</span><h3>{concept.title}</h3><p>{concept.category}</p></div>
+              <div><span>#{concept.code}</span><h3>{concept.title}</h3><p>{concept.category}</p></div>
             </article>
           ))}
         </div>
@@ -166,6 +166,7 @@ export default function Home() {
           </div>
           <div className="garden-keeper-copy">
             <p>Light meets living</p>
+            <span className="concept-reference">#1304</span>
             <h3>The Garden<br /><em>Keeper.</em></h3>
             <p className="garden-keeper-lead">A floor lamp imagined as a quiet standing presence—holding light above and a little life in each hand.</p>
             <p>Its continuous blackened-iron line becomes body, arms and structure. Two forged hooks carry small hanging planters, while a warm linen shade completes the silhouette.</p>
@@ -175,7 +176,7 @@ export default function Home() {
               <span><strong>03</strong>Hand-forged iron</span>
             </div>
             <a
-              href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20discuss%20The%20Garden%20Keeper%20concept."
+              href="https://wa.me/919326969492?text=Hello%20Rajesh%21%20I%20wanted%20to%20get%20more%20details%20and%20discuss%20ideas%20related%20to%20%231304%20%28The%20Garden%20Keeper%29."
               target="_blank"
               rel="noreferrer"
             >Discuss this concept <ArrowUpRight /></a>
@@ -188,10 +189,10 @@ export default function Home() {
         </div>
 
         <div className="concept-grid">
-          {conceptWorks.map((concept, index) => (
+          {conceptWorks.map((concept) => (
             <article className="concept-card scroll-reveal" key={concept.src}>
               <a
-                href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh, I would like to discuss a Decoline idea inspired by “${concept.title}”.`)}`}
+                href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh! I wanted to get more details and discuss ideas related to #${concept.code} (${concept.title}).`)}`}
                 className="concept-image"
                 target="_blank"
                 rel="noreferrer"
@@ -199,7 +200,7 @@ export default function Home() {
                 <img data-expandable src={concept.src} alt={`${concept.title} — ${concept.category.toLowerCase()} concept for Decoline`} loading="lazy" />
                 <span>Discuss this idea <ArrowUpRight /></span>
               </a>
-              <div><span>{String(index + 1).padStart(2, "0")}</span><h3>{concept.title}</h3><p>{concept.category}</p></div>
+              <div><span>#{concept.code}</span><h3>{concept.title}</h3><p>{concept.category}</p></div>
             </article>
           ))}
         </div>
@@ -233,7 +234,7 @@ export default function Home() {
       <section className="custom-work" id="custom">
         <div className="custom-image scroll-reveal">
           <img data-expandable src="/concepts/custom-nameplate-khadse.jpg" alt="Custom forged metal letter K and KHADSE family name beside a home entrance" loading="lazy" />
-          <span>Letters · Names · House numbers · Personal symbols</span>
+          <span>#1601 · Letters · Names · House numbers · Personal symbols</span>
         </div>
         <div className="custom-copy scroll-reveal">
           <p className="section-number">07 / Custom-made for you</p>
