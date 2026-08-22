@@ -48,6 +48,8 @@ test("server-renders the complete Decoline experience", async () => {
   assert.match(html, /Rajesh Khadse/);
   assert.match(html, /Deepa Khadse/);
   assert.match(html, /Imagined together/);
+  assert.match(html, /Ask about this piece/);
+  assert.match(html, /I%20would%20like%20to%20ask%20about%20the%20Decoline%20piece/);
   assert.match(html, /wa\.me\/919326969492/);
   assert.doesNotMatch(html, /\/artworks\//);
 });

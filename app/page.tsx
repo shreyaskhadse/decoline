@@ -89,7 +89,11 @@ export default function Home() {
               <div className="art-image">
                 <img data-expandable src={work.src} alt={`${work.title}, handcrafted ${work.category.toLowerCase()} by Decoline`} loading={index > 1 ? "lazy" : "eager"} />
                 <span className="work-number">0{index + 1}</span>
-                <a href={`mailto:guidelinengp@gmail.com?subject=Enquiry%20about%20${encodeURIComponent(work.title)}`}>Ask about this piece <ArrowUpRight /></a>
+                <a
+                  href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh, I would like to ask about the Decoline piece “${work.title}”.`)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >Ask about this piece <ArrowUpRight /></a>
               </div>
               <div className="art-caption"><div><h3>{work.title}</h3><p>{work.category}</p></div><span>Made to order</span></div>
             </article>
