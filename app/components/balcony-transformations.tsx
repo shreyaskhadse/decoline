@@ -97,6 +97,7 @@ export function BalconyTransformations() {
             fill
             sizes="(max-width: 620px) 88vw, 90vw"
             quality={88}
+            unoptimized
           />
           <div className="balcony-after-mask" aria-hidden="true">
             <Image
@@ -106,6 +107,7 @@ export function BalconyTransformations() {
               fill
               sizes="(max-width: 620px) 88vw, 90vw"
               quality={88}
+              unoptimized
             />
           </div>
           <span className="balcony-state-label balcony-before-label">Before</span>

@@ -162,7 +162,7 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .balcony-intro-copy p { margin: 0; color: #d0cbc1; font-family: var(--font-display), Georgia, serif; font-size: 24px; line-height: 1.5; }
 .balcony-intro-copy small { display: block; margin-top: 25px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.18); color: #928d84; font-size: 8px; line-height: 1.75; letter-spacing: .14em; text-transform: uppercase; }
 .balcony-stage { position: relative; }
-.balcony-reveal { --reveal: 50%; position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #9b8b73; cursor: ew-resize; isolation: isolate; }
+.balcony-reveal { --reveal: 50%; width: min(100%, 1320px, 93dvh); margin-inline: auto; position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #9b8b73; cursor: ew-resize; isolation: isolate; }
 .balcony-before, .balcony-after { object-fit: cover; }
 .balcony-after-mask { position: absolute; z-index: 1; inset: 0; overflow: hidden; clip-path: inset(0 calc(100% - var(--reveal)) 0 0); pointer-events: none; }
 .balcony-state-label { position: absolute; z-index: 3; top: 20px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.5); background: rgba(23,22,17,.52); color: white; font-size: 7px; letter-spacing: .18em; text-transform: uppercase; backdrop-filter: blur(5px); }
@@ -173,7 +173,7 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .balcony-divider .arrow-icon { width: 14px; height: 14px; }
 .arrow-icon.reverse { transform: rotate(180deg); }
 .balcony-range { position: absolute; z-index: 5; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y; }
-.balcony-caption { min-height: 135px; padding: 26px 0 22px; display: grid; grid-template-columns: .27fr 1fr auto; gap: 4vw; align-items: center; border-bottom: 1px solid rgba(255,255,255,.18); }
+.balcony-caption { width: min(100%, 1320px, 93dvh); min-height: 128px; margin-inline: auto; padding: 23px 0 20px; display: grid; grid-template-columns: .27fr 1fr auto; gap: 4vw; align-items: center; border-bottom: 1px solid rgba(255,255,255,.18); }
 .balcony-caption-index { display: flex; flex-direction: column; gap: 12px; }
 .balcony-caption-index > span { color: #c6a469; font-family: var(--font-display), Georgia, serif; font-size: 31px; }
 .balcony-caption-index small, .balcony-caption-copy small { color: #8f8a80; font-size: 7px; line-height: 1.6; letter-spacing: .16em; text-transform: uppercase; }
@@ -183,7 +183,7 @@ h1 em, h2 em { color: var(--bronze); font-weight: 400; }
 .balcony-navigation button { width: 43px; height: 43px; padding: 0; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.27); border-radius: 50%; background: transparent; color: var(--paper); cursor: pointer; transition: border-color .25s ease, background .25s ease; }
 .balcony-navigation button:hover, .balcony-navigation button:focus-visible { border-color: #c6a469; background: rgba(198,164,105,.12); }
 .balcony-navigation > span { color: #8f8a80; font-size: 8px; letter-spacing: .14em; white-space: nowrap; }
-.balcony-dots { margin-top: 18px; display: flex; justify-content: flex-end; gap: 9px; }
+.balcony-dots { width: min(100%, 1320px, 93dvh); margin: 16px auto 0; display: flex; justify-content: flex-end; gap: 9px; }
 .balcony-dots button { width: 26px; height: 12px; padding: 0; position: relative; border: 0; background: transparent; cursor: pointer; }
 .balcony-dots button::after { content: ""; position: absolute; left: 0; right: 0; top: 5px; height: 1px; background: rgba(255,255,255,.28); transition: background .25s ease, transform .25s ease; }
 .balcony-dots button.is-active::after { background: #c6a469; transform: scaleY(2); }
@@ -412,6 +412,7 @@ img[data-expandable] { cursor: zoom-in; }
   .balcony-intro-copy { justify-self: start; }
   .balcony-intro-copy p { font-size: 21px; }
   .balcony-reveal { aspect-ratio: 3 / 2; }
+  .balcony-reveal, .balcony-caption, .balcony-dots { width: 100%; }
   .balcony-state-label { top: 12px; padding: 8px 9px; }
   .balcony-before-label { left: 12px; }
   .balcony-after-label { right: 12px; }
