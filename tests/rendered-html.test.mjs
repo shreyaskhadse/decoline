@@ -51,12 +51,14 @@ test("server-renders the complete Decoline experience", async () => {
   assert.match(html, /Ask about this piece/);
   assert.match(html, /I%20would%20like%20to%20ask%20about%20the%20Decoline%20piece/);
   assert.match(html, /wa\.me\/919326969492/);
+  assert.doesNotMatch(html, /mailto:/i);
   assert.doesNotMatch(html, /\/artworks\//);
 });
 
 test("uses generated visual collections and includes phone layouts", async () => {
-  const [page, css, layout] = await Promise.all([
+  const [page, header, css, layout] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/site-header.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
   ]);
@@ -71,6 +73,7 @@ test("uses generated visual collections and includes phone layouts", async () =>
   assert.match(page, /floating-whatsapp/);
   assert.match(page, /ArrowUpRight/);
   assert.doesNotMatch(page, /↗|→|↓/);
+  assert.doesNotMatch(`${page}\n${header}`, /mailto:/i);
   assert.match(css, /@media \(max-width: 620px\)/);
   assert.doesNotMatch(css, /\.site-header\.is-hidden/);
   assert.match(css, /aspect-ratio:\s*1672\s*\/\s*941/);

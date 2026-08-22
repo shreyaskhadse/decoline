@@ -146,7 +146,12 @@ export default function Home() {
         <div className="concept-grid workshop-concepts-grid">
           {workshopConcepts.map((concept, index) => (
             <article className="concept-card scroll-reveal" key={concept.src}>
-              <a href={`mailto:guidelinengp@gmail.com?subject=Custom%20Decoline%20idea%20inspired%20by%20${encodeURIComponent(concept.title)}`} className="concept-image">
+              <a
+                href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh, I would like to discuss the Decoline piece “${concept.title}”.`)}`}
+                className="concept-image"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img data-expandable src={concept.src} alt={`${concept.title} — refined ${concept.category.toLowerCase()} based on a Decoline workshop prototype`} loading="lazy" />
                 <span>Discuss this piece <ArrowUpRight /></span>
               </a>
@@ -169,7 +174,11 @@ export default function Home() {
               <span><strong>02</strong>Two planter hooks</span>
               <span><strong>03</strong>Hand-forged iron</span>
             </div>
-            <a href="mailto:guidelinengp@gmail.com?subject=Enquiry%20about%20The%20Garden%20Keeper">Discuss this concept <ArrowUpRight /></a>
+            <a
+              href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20discuss%20The%20Garden%20Keeper%20concept."
+              target="_blank"
+              rel="noreferrer"
+            >Discuss this concept <ArrowUpRight /></a>
           </div>
         </article>
 
@@ -181,7 +190,12 @@ export default function Home() {
         <div className="concept-grid">
           {conceptWorks.map((concept, index) => (
             <article className="concept-card scroll-reveal" key={concept.src}>
-              <a href={`mailto:guidelinengp@gmail.com?subject=Custom%20Decoline%20idea%20inspired%20by%20${encodeURIComponent(concept.title)}`} className="concept-image">
+              <a
+                href={`https://wa.me/919326969492?text=${encodeURIComponent(`Hello Rajesh, I would like to discuss a Decoline idea inspired by “${concept.title}”.`)}`}
+                className="concept-image"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img data-expandable src={concept.src} alt={`${concept.title} — ${concept.category.toLowerCase()} concept for Decoline`} loading="lazy" />
                 <span>Discuss this idea <ArrowUpRight /></span>
               </a>
@@ -301,7 +315,11 @@ export default function Home() {
           <h2>Start something<br /><em>personal.</em></h2>
           <div className="contact-copy">
             <p>For available works, made-to-order pieces, custom names and completely new ideas, begin a conversation with Decoline. Rajesh handles enquiries directly.</p>
-            <a href="mailto:guidelinengp@gmail.com?subject=Decoline%20artwork%20enquiry">guidelinengp@gmail.com <ArrowUpRight /></a>
+            <a
+              href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20enquire%20about%20Decoline."
+              target="_blank"
+              rel="noreferrer"
+            >Message Rajesh on WhatsApp <ArrowUpRight /></a>
             <a href="tel:+919326969492">+91 93269 69492 <ArrowUpRight /></a>
             <a className="whatsapp" href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20know%20more%20about%20Decoline." target="_blank" rel="noreferrer">Start on WhatsApp <ArrowUpRight /></a>
           </div>

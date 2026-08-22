@@ -14,7 +14,12 @@ export function SiteHeader() {
         <a href="#custom">Custom work</a>
         <a href="#studio">The studio</a>
       </nav>
-      <a className="header-enquire" href="mailto:guidelinengp@gmail.com?subject=Decoline%20artwork%20enquiry">
+      <a
+        className="header-enquire"
+        href="https://wa.me/919326969492?text=Hello%20Rajesh%2C%20I%20would%20like%20to%20enquire%20about%20Decoline."
+        target="_blank"
+        rel="noreferrer"
+      >
         Enquire <ArrowUpRight />
       </a>
     </header>
